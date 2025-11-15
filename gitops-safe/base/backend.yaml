@@ -1,6 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  annotations:
+    argocd.argoproj.io/tracking-id: humor-game-monitor:apps/Deployment:humor-game/backend
+    gitops.argoproj.io/description: Safe GitOps monitoring for Humor Game
+    gitops.argoproj.io/version: 1.0.0
+  labels:
+    app.kubernetes.io/instance: dev
+    app.kubernetes.io/managed-by: argocd
+    app.kubernetes.io/name: humor-game
+    app.kubernetes.io/part-of: gitops-demo:
   name: backend
   namespace: humor-game
 spec:
@@ -8,14 +17,25 @@ spec:
   selector:
     matchLabels:
       app: backend
+      app.kubernetes.io/instance: dev
+      app.kubernetes.io/managed-by: argocd
+      app.kubernetes.io/name: humor-game
+      app.kubernetes.io/part-of: gitops-demo
   template:
     metadata:
+      annotations:
+        argocd.argoproj.io/tracking-id: humor-game-monitor:/kustomization.yaml
+        gitops.argoproj.io/description: Safe GitOps monitoring for Humor Game
+        gitops.argoproj.io/version: 1.0.0
+        prometheus.io/path: /metrics
+        prometheus.io/port: '3001'
+        prometheus.io/scrape: 'true'
       labels:
         app: backend
-      annotations:
-        prometheus.io/scrape: "true"
-        prometheus.io/port: "3001"
-        prometheus.io/path: "/metrics"
+        app.kubernetes.io/instance: dev
+        app.kubernetes.io/managed-by: argocd
+        app.kubernetes.io/name: humor-game
+        app.kubernetes.io/part-of: gitops-demo
     spec:
       containers:
         - name: backend
