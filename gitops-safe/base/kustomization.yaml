@@ -8,9 +8,9 @@ metadata:
 # Base resources - BUILDING FOUNDATION FIRST
 # Start with core infrastructure, then add dependent resources
 resources:
-- configmap.yaml
-- pvc.yaml
-- postgres-init.yaml
+#- configmap.yaml
+#- pvc.yaml
+#- postgres-init.yaml
 - security-contexts.yaml
 - redis-deployment.yaml
 #- redis-service.yaml
