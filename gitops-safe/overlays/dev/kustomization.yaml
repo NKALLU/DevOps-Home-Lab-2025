@@ -9,7 +9,7 @@ metadata:
 # It just tracks what's different between Git and your cluster
 
 # Reference the base configuration
-bases:
+res:
 - ../../base
 
 # Resources to monitor (starting with safe ConfigMap)
@@ -42,9 +42,9 @@ patches:
       name: frontend
   - path: backend-annotations-patch.yaml
     target:
-      kind: service
+      kind: Service
       name: backend
   - path: frontend-annotations-patch.yaml
     target:
-      kind: service
+      kind: Service
       name: frontend
