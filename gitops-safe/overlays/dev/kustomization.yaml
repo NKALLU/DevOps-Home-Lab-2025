@@ -30,3 +30,6 @@ commonAnnotations:
 
 # No patches or transformations for now
 # This ensures your working app stays exactly as is
+
+patches:
+  - backend-annotations-patch.yaml
