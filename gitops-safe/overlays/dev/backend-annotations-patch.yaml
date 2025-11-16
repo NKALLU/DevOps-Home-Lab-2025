@@ -10,7 +10,7 @@ metadata:
 ---
 
 apiVersion: apps/v1
-kind: service
+kind: Service
 metadata:
   name: backend
   annotations:
