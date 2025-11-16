@@ -36,3 +36,7 @@ patches:
     target:
       kind: Deployment
       name: backend
+  - path: frontend-annotations-patch.yaml
+    target:
+      kind: Deployment
+      name: frontend
