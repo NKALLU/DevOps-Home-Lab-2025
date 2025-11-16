@@ -9,7 +9,7 @@ metadata:
 # It just tracks what's different between Git and your cluster
 
 # Reference the base configuration
-res:
+resources:
 - ../../base
 
 # Resources to monitor (starting with safe ConfigMap)
