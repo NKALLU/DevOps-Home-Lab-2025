@@ -33,17 +33,17 @@ patches:
       kind: Deployment
       name: backend
 
-  - path: backend-service-annotations-patch.yaml
-    target:
-      kind: Service
-      name: backend
+  # - path: backend-service-annotations-patch.yaml
+  #   target:
+  #     kind: Service
+  #     name: backend
 
   - path: frontend-deployment-annotations-patch.yaml
     target:
       kind: Deployment
       name: frontend
 
-  - path: frontend-service-annotations-patch.yaml
-    target:
-      kind: Service
-      name: frontend
+  # - path: frontend-service-annotations-patch.yaml
+  #   target:
+  #     kind: Service
+  #     name: frontend
