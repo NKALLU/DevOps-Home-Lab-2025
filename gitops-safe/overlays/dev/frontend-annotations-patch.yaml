@@ -6,3 +6,14 @@ metadata:
     argocd.argoproj.io/tracking-id: humor-game-monitor:apps/Deployment:humor-game/frontend
     gitops.argoproj.io/description: Safe GitOps monitoring for Humor Game
     gitops.argoproj.io/version: "1.0.0"
+
+---
+
+apiVersion: apps/v1
+kind: service
+metadata:
+  name: frontend
+  annotations:
+    argocd.argoproj.io/tracking-id: humor-game-monitor:apps/Deployment:humor-game/frontend
+    gitops.argoproj.io/description: Safe GitOps monitoring for Humor Game
+    gitops.argoproj.io/version: "1.0.0"
