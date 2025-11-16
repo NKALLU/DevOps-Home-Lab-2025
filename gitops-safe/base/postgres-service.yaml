@@ -1,10 +1,23 @@
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    argocd.argoproj.io/tracking-id: humor-game-monitor-02:/Service:humor-game/postgres
+    gitops.argoproj.io/description: Safe GitOps monitoring for Humor Game
+    gitops.argoproj.io/version: 1.0.0
+  labels:
+    app.kubernetes.io/instance: dev
+    app.kubernetes.io/managed-by: argocd
+    app.kubernetes.io/name: humor-game
+    app.kubernetes.io/part-of: gitops-demo
   name: postgres
   namespace: humor-game
 spec:
-  selector:
-    app: postgres
   ports:
     - port: 5432
+  selector:
+    app: postgres
+    app.kubernetes.io/instance: dev
+    app.kubernetes.io/managed-by: argocd
+    app.kubernetes.io/name: humor-game
+    app.kubernetes.io/part-of: gitops-demo
