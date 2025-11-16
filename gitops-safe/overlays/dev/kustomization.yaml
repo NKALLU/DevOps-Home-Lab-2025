@@ -31,8 +31,5 @@ commonAnnotations:
 # No patches or transformations for now
 # This ensures your working app stays exactly as is
 
-patches:
-  - path: backend-annotations-patch.yaml
-    target:
-      kind: Deployment
-      name: backend
+patchesStrategicMerge:
+  - backend-annotations-patch.yaml
