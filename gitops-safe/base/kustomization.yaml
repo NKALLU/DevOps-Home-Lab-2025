@@ -10,7 +10,7 @@ metadata:
 resources:
 - configmap.yaml
 - pvc.yaml
-- postgres-init.yaml
+#- postgres-init.yaml
 - security-contexts.yaml
 - redis-deployment.yaml
 - redis-service.yaml
