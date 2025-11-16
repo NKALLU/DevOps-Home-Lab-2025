@@ -32,4 +32,7 @@ commonAnnotations:
 # This ensures your working app stays exactly as is
 
 patches:
-  - backend-annotations-patch.yaml
+  - path: backend-annotations-patch.yaml
+    target:
+      kind: Deployment
+      name: backend
