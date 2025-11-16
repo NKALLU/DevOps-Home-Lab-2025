@@ -32,19 +32,19 @@ commonAnnotations:
 # This ensures your working app stays exactly as is
 
 patches:
-  - path: backend-annotations-patch.yaml
+  - path: backend-deployment-annotations-patch.yaml
     target:
       kind: Deployment
       name: backend
-  - path: frontend-annotations-patch.yaml
+  - path: frontend-deployment-annotations-patch.yaml
     target:
       kind: Deployment
       name: frontend
-  - path: backend-annotations-patch.yaml
+  - path: backend-service-annotations-patch.yaml
     target:
       kind: Service
       name: backend
-  - path: frontend-annotations-patch.yaml
+  - path: frontend-service-annotations-patch.yaml
     target:
       kind: Service
       name: frontend
